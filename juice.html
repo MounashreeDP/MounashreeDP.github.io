@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juice Menu</title>
+    <style>
+        body {
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            text-align: center;
+            background-color: rgb(255, 211, 218);
+        }
+        h1 {
+            background-color:rgb(202, 27, 89);
+            color: white;
+            padding: 50px;
+            margin: 5;
+        }
+        .juice-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px;
+        }
+        .juice-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            margin: 15px;
+            padding: 10px;
+            width: 250px;
+            text-align: center;
+        }
+        .juice-card img {
+            width: 100%;
+            height: 200px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+        .juice-card h3 {
+            margin: 10px 0;
+        }
+        .about-btn {
+            background-color: rgb(202, 27, 89);
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .about-btn:hover {
+            background-color:rgb(202, 27, 89);
+        }
+        .description {
+            display: none;
+            margin-top: 10px;
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🍹OUR SCS MOCKTAILS HERE!!!!</h1>
+
+    <div class="juice-container">
+        <!-- Orange Juice -->
+        <div class="juice-card">
+            <img src="https://media.post.rvohealth.io/wp-content/uploads/2020/08/orange-juice-732x549-thumbnail.jpg" alt="Orange Juice">
+            <h3>Orange Juice</h3>
+            <button class="about-btn" onclick="toggleDescription(0)">About</button>
+            <p class="description">Freshly squeezed orange juice full of vitamin C and antioxidants.</p>
+        </div>
+
+        <!-- Apple Juice -->
+        <div class="juice-card">
+            <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2022/02/apple-juice-recipe.jpg" alt="Apple Juice">
+            <h3>Apple Juice</h3>
+            <button class="about-btn" onclick="toggleDescription(1)">About</button>
+            <p class="description">A sweet and refreshing juice made from fresh apples.</p>
+        </div>
+
+        <!-- Mango Juice -->
+        <div class="juice-card">
+            <img src="https://t3.ftcdn.net/jpg/11/78/94/04/360_F_1178940477_DDsR7bhTaqH8HUxATdktyWTjGgEvkeM5.jpg" alt="Mango Juice">
+            <h3>Mango Juice</h3>
+            <button class="about-btn" onclick="toggleDescription(2)">About</button>
+            <p class="description">Rich, pulpy mango juice loaded with tropical flavors.</p>
+        </div>
+
+        <!-- Pineapple Juice -->
+        <div class="juice-card">
+            <img src="https://tiimg.tistatic.com/fp/1/007/561/highly-nutrition-enriched-sweet-100-fresh-yellow-pineapple-juice--265.jpg" alt="Pineapple Juice">
+            <h3>Pineapple Juice</h3>
+            <button class="about-btn" onclick="toggleDescription(3)">About</button>
+            <p class="description">A tropical delight made from fresh pineapples, rich in enzymes.</p>
+        </div>
+
+        <!-- Watermelon Juice -->
+        <div class="juice-card">
+            <img src="https://www.flavourstreat.com/wp-content/uploads/2022/08/homemade-watermelon-juice.jpg" alt="Watermelon Juice">
+            <h3>Watermelon Juice</h3>
+            <button class="about-btn" onclick="toggleDescription(4)">About</button>
+            <p class="description">Hydrating and refreshing juice made from juicy watermelons.</p>
+        </div>
+
+        <!-- Grape Juice -->
+        <div class="juice-card">
+            <img src="https://vaya.in/recipes/wp-content/uploads/2018/02/Grape-Juice.jpg" alt="Grape Juice">
+            <h3>Grape Juice</h3>
+            <button class="about-btn" onclick="toggleDescription(5)">About</button>
+            <p class="description">A delicious juice made from fresh grapes, packed with antioxidants.</p>
+        </div>
+
+        <!-- Lemon Juice -->
+        <div class="juice-card">
+            <img src="https://4.imimg.com/data4/HR/VP/MY-30165244/lemon-juice.jpg" alt="Lemon Juice">
+            <h3>Lemon Juice</h3>
+            <button class="about-btn" onclick="toggleDescription(6)">About</button>
+            <p class="description">A tangy and refreshing drink with a citrusy punch.</p>
+        </div>
+
+        <!-- Pomegranate Juice -->
+        <div class="juice-card">
+            <img src="https://healthynibblesandbits.com/wp-content/uploads/2016/11/How-to-Cut-a-Pomegranate-FF.jpg" alt="Pomegranate Juice">
+            <h3>Pomegranate Juice</h3>
+            <button class="about-btn" onclick="toggleDescription(7)">About</button>
+            <p class="description">A nutrient-rich juice with a slightly sweet and tart flavor.</p>
+        </div>
+
+        <!-- Carrot Juice -->
+        <div class="juice-card">
+            <img src="https://i.pinimg.com/736x/80/69/d6/8069d678480fee3d17ea1f2cf96401b9.jpg" alt="Carrot Juice">
+            <h3>Carrot Juice</h3>
+            <button class="about-btn" onclick="toggleDescription(8)">About</button>
+            <p class="description">A nutritious juice loaded with beta-carotene and vitamins.</p>
+        </div>
+
+        <!-- Strawberry Juice -->
+        <div class="juice-card">
+            <img src="https://www.organicfacts.net/wp-content/uploads/strawberryjuice.jpg" alt="Strawberry Juice">
+            <h3>Strawberry Juice</h3>
+            <button class="about-btn" onclick="toggleDescription(9)">About</button>
+            <p class="description">A sweet and tangy juice bursting with berry flavors.</p>
+        </div>
+        <!-- chikoo shake -->
+        <div class="juice-card">
+            <img src="https://m.media-amazon.com/images/I/31f2EoozpeL._AC_UF1000,1000_QL80_.jpg" alt="chikoo shake">
+            <h3>chikoo shake</h3>
+            <button class="about-btn" onclick="toggleDescription(10)">About</button>
+            <p class="description">Chikoo is a tropical fruit rich in vitamins and minerals promoting well-being.</p>
+        </div>
+        <!-- Oreo shake -->
+        <div class="juice-card">
+            <img src="https://www.whiskaffair.com/wp-content/uploads/2020/07/Oreo-Milkshake-2-3.jpg" alt="Oreo shake">
+            <h3>Oreo shake</h3>
+            <button class="about-btn" onclick="toggleDescription(11)">About</button>
+            <p class="description">his cookies & cream Oreo milkshake is full of potassium, as well as calcium, Vitamin C, and fiber.</p>
+        </div>
+        <div class="juice-card">
+            <img src="https://cdn3.foodviva.com/static-content/food-images/juice-recipes/fresh-spinach-juice-recipe/fresh-spinach-juice-recipe.jpg" alt="Palak Juice">
+            <h3>Palak Juice</h3>
+            <button class="about-btn" onclick="toggleDescription(12)">About</button>
+            <p class="description">A refreshing spinach juice, rich in iron and essential nutrients.</p>
+        </div>
+
+        <div class="juice-card">
+            <img src="https://buildyourbite.com/wp-content/uploads/2024/01/Cucumber-Juice-Compressed-46.jpg" alt="Cucumber Juice">
+            <h3>Cucumber Juice</h3>
+            <button class="about-btn" onclick="toggleDescription(13)">About</button>
+            <p class="description">A hydrating juice that keeps you refreshed and cool.</p>
+        </div>
+
+        <div class="juice-card">
+            <img src="https://assets.hotcooking.co.uk/portrait45/green-juice-apple-cucumber-spinach-mint-lemon_large.jpg" alt="Spinach and Cucumber Juice">
+            <h3>Spinach & Cucumber Juice</h3>
+            <button class="about-btn" onclick="toggleDescription(14)">About</button>
+            <p class="description">A detoxifying juice blend packed with antioxidants.</p>
+        </div>
+
+        <div class="juice-card">
+            <img src="https://myborosil.com/cdn/shop/articles/17_ABC_Detox_Juice.jpg" alt="ABC Juice">
+            <h3>ABC Juice</h3>
+            <button class="about-btn" onclick="toggleDescription(15)">About</button>
+            <p class="description">A powerful juice made from Apple, Beetroot, and Carrot for a health boost.</p>
+        </div>
+
+        <div class="juice-card">
+            <img src="https://images.onlymyhealth.com/webstories/5158/1674541046-6-health-benefits-of-bitter-gourd-juice.cover.jpg" alt="Bitter Gourd Juice">
+            <h3>Bitter Gourd Juice</h3>
+            <button class="about-btn" onclick="toggleDescription(16)">About</button>
+            <p class="description">A diabetes-friendly juice with great detox properties.</p>
+        </div>
+
+        <div class="juice-card">
+            <img src="https://images.news18.com/webstories/uploads/2024/11/amla-juice-benefits-11-2024-11-253392e431001045a605de2f3a25a982.jpg" alt="Gooseberry Juice">
+            <h3>Gooseberry Juice</h3>
+            <button class="about-btn" onclick="toggleDescription(17)">About</button>
+            <p class="description">Amla juice is an immunity booster, rich in Vitamin C.</p>
+        </div>
+
+        <div class="juice-card">
+            <img src="https://img.etimg.com/photo/111066290/111066290.jpg" alt="Bottle Gourd Juice">
+            <h3>Bottle Gourd Juice</h3>
+            <button class="about-btn" onclick="toggleDescription(18)">About</button>
+            <p class="description">A light and detoxifying juice, perfect for digestion.</p>
+        </div>
+
+        <div class="juice-card">
+            <img src="https://img.freepik.com/premium-photo/kiwi-juice-with-splashes-with-kiwi-fruit-studio-background-restaurant-with-garden_741910-6402.jpg" alt="Kiwi Fruit Juice">
+            <h3>Kiwi Fruit Juice</h3>
+            <button class="about-btn" onclick="toggleDescription(19)">About</button>
+            <p class="description">A tangy, vitamin-packed juice made from fresh kiwi.</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleDescription(index) {
+            let descriptions = document.querySelectorAll('.description');
+            if (descriptions[index].style.display === "none") {
+                descriptions[index].style.display = "block";
+            } else {
+                descriptions[index].style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
